@@ -17,6 +17,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gt-jlowe/degree-component.git"
         }
     ],
     "_comment": [
