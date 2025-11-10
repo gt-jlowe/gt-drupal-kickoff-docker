@@ -1,0 +1,400 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gt_people.field_gtppl_awards
+    - field.field.node.gt_people.field_gtppl_bio_summary
+    - field.field.node.gt_people.field_gtppl_biography
+    - field.field.node.gt_people.field_gtppl_bldg
+    - field.field.node.gt_people.field_gtppl_bldg_room
+    - field.field.node.gt_people.field_gtppl_bldg_url_map
+    - field.field.node.gt_people.field_gtppl_education
+    - field.field.node.gt_people.field_gtppl_email
+    - field.field.node.gt_people.field_gtppl_fax
+    - field.field.node.gt_people.field_gtppl_gtaccount
+    - field.field.node.gt_people.field_gtppl_image
+    - field.field.node.gt_people.field_gtppl_image_local
+    - field.field.node.gt_people.field_gtppl_image_url
+    - field.field.node.gt_people.field_gtppl_phone
+    - field.field.node.gt_people.field_gtppl_pronouns
+    - field.field.node.gt_people.field_gtppl_publications
+    - field.field.node.gt_people.field_gtppl_research_group
+    - field.field.node.gt_people.field_gtppl_research_group_url
+    - field.field.node.gt_people.field_gtppl_research_history
+    - field.field.node.gt_people.field_gtppl_research_keywords
+    - field.field.node.gt_people.field_gtppl_research_summary
+    - field.field.node.gt_people.field_gtppl_roles
+    - field.field.node.gt_people.field_gtppl_salutation
+    - field.field.node.gt_people.field_gtppl_title_custom
+    - field.field.node.gt_people.field_gtppl_title_custom_html
+    - field.field.node.gt_people.field_gtppl_title_custom_short
+    - field.field.node.gt_people.field_gtppl_title_official
+    - field.field.node.gt_people.field_gtppl_url_cv_resume
+    - field.field.node.gt_people.field_gtppl_url_gscholar
+    - field.field.node.gt_people.field_gtppl_url_orcid
+    - field.field.node.gt_people.field_gtppl_url_personal
+    - field.field.node.gt_people.field_gtppl_url_publons
+    - field.field.node.gt_people.field_gtppl_url_pubmed
+    - field.field.node.gt_people.field_gtppl_url_researcherid
+    - field.field.node.gt_people.field_gtppl_url_researchgate
+    - field.field.node.gt_people.field_gtppl_url_scopus
+    - field.field.node.gt_people.field_testing_formatted
+    - field.field.node.gt_people.field_testing_formatted_long
+    - image.style.thumbnail
+    - node.type.gt_people
+  module:
+    - image
+    - media_library
+    - path
+    - telephone
+    - text
+id: node.gt_people.default
+targetEntityType: node
+bundle: gt_people
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gtppl_awards:
+    type: text_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_bio_summary:
+    type: string_textfield
+    weight: 124
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_biography:
+    type: text_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_bldg:
+    type: options_select
+    weight: 161
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gtppl_bldg_room:
+    type: string_textfield
+    weight: 162
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_bldg_url_map:
+    type: string_textfield
+    weight: 160
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_education:
+    type: text_textfield
+    weight: 125
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_email:
+    type: email_default
+    weight: 126
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_gtppl_fax:
+    type: telephone_default
+    weight: 127
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_gtaccount:
+    type: string_textfield
+    weight: 128
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_image:
+    type: image_image
+    weight: 164
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_gtppl_image_local:
+    type: media_library_widget
+    weight: 165
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_gtppl_image_url:
+    type: string_textfield
+    weight: 166
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_phone:
+    type: telephone_default
+    weight: 131
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_pronouns:
+    type: options_select
+    weight: 136
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gtppl_publications:
+    type: text_textfield
+    weight: 151
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_research_group:
+    type: string_textfield
+    weight: 152
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_research_group_url:
+    type: string_textfield
+    weight: 153
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_research_history:
+    type: text_textfield
+    weight: 154
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_research_keywords:
+    type: string_textfield
+    weight: 155
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_research_summary:
+    type: string_textfield
+    weight: 156
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_roles:
+    type: options_select
+    weight: 163
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gtppl_salutation:
+    type: options_select
+    weight: 157
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gtppl_title_custom:
+    type: string_textfield
+    weight: 132
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_title_custom_html:
+    type: text_textfield
+    weight: 133
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_title_custom_short:
+    type: string_textfield
+    weight: 135
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_title_official:
+    type: string_textfield
+    weight: 134
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_cv_resume:
+    type: string_textfield
+    weight: 158
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_gscholar:
+    type: string_textfield
+    weight: 144
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_orcid:
+    type: string_textfield
+    weight: 145
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_personal:
+    type: string_textfield
+    weight: 159
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_publons:
+    type: string_textfield
+    weight: 146
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_pubmed:
+    type: string_textfield
+    weight: 147
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_researcherid:
+    type: string_textfield
+    weight: 148
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_researchgate:
+    type: string_textfield
+    weight: 149
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gtppl_url_scopus:
+    type: string_textfield
+    weight: 150
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testing_formatted:
+    type: text_textfield
+    weight: 167
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testing_formatted_long:
+    type: text_textarea
+    weight: 168
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

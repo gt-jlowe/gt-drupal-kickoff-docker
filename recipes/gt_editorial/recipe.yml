@@ -1,0 +1,34 @@
+name: 'GT Editorial'
+description: 'Common Editorial, CKE5, and image configurations'
+type: 'Site'
+
+recipes:
+  - blazy
+
+install:
+  - blazy
+  - crop
+  - focal_point
+  - imagemagick
+  - responsive_image
+  - svg_image
+
+  - linkpurpose
+  - editor_advanced_link
+  - fontawesome
+  - shortcut
+
+  - diff
+  - diff_plus
+  - node_revision_delete
+  - quick_node_clone
+  - scheduler
+  - trash
+
+  - oembed_lazyload
+  - oembed_providers
+
+config:
+  strict: false
+  import:
+    editoria11y: '*'

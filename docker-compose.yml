@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # PHP-FPM Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: drupal_app
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+    environment:
+      - PHP_FPM_CLEAR_ENV=no # Allows .env variables to pass through
+    networks:
+      - drupal_net
+
+  # Nginx Service
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: drupal_nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80" 
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - drupal_net
+
+  db:
+    image: mariadb:10.11
+    container_name: drupal_db
+    restart: unless-stopped
+    ports:
+      - "3306:3306" 
+    environment:
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - drupal_net
+
+volumes:
+  db_data:
+
+networks:
+  drupal_net:
